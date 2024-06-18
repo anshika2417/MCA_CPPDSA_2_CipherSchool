@@ -13,7 +13,11 @@ class Add{
         n1=add1;
         n2=add2;
     }
-
+    void setSum(T a, T1 b)
+    {
+        n1=a;
+        n2=b;
+    }
     T1 getSum()
     {
         return n1+n2;
@@ -22,6 +26,8 @@ class Add{
 int main()
 {
     Add<int,float> n1(5,5.5);
+    cout<<n1.getSum()<<endl;
+    n1.setSum(4,5.2);
     cout<<n1.getSum();
 
 }
