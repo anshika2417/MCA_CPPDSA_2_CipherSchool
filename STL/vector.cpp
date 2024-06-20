@@ -6,10 +6,17 @@ using namespace std;
 
 int main()
 {
-    vector<int> vector1 {1,2,3,4};
+    int n;
+    cout<<"Enter size of an array ";
+    cin>>n;
+    vector<int> v1(n);
+    for(int i=0;i<n;i++)
+    {
+        cin>>v1[i];
+    }
     
     //add
-    vector1.push_back(10);
+    // v1.push_back(10);
 
     //updatation
     //vector1.at(2)=25;
@@ -19,9 +26,9 @@ int main()
    // cout<<vector1.at(10)<<endl; //this gives out of bound array error
 
    //deletion
-   vector1.pop_back();
-   
-    for(int item:vector1){
+//    v1.pop_back();
+
+    for(int item:v1){
         cout<<item<<" ";
     }
 }
