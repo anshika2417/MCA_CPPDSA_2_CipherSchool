@@ -41,7 +41,7 @@ int main()
     //deallocate
     for(int i=0;i<row;i++)
     {
-        cout<<"Deallocation of memory "<<endl;
+        cout<<"Deallocation of memory"<<endl;
         delete []arr[i];
     }
     delete []arr;
