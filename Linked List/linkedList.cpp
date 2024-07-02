@@ -57,6 +57,23 @@ bool search(Node* &head,int key)
     return false;
 }
 
+void reverseSingly(Node* &head)
+{
+    Node* curr=head;
+    Node* prev=NULL;
+    Node* next;
+
+    while(curr!=NULL)
+    {
+        next=curr->next;
+        curr->next=prev;
+
+        prev=curr;
+        curr=next;
+    }
+    head=prev;
+}
+
 void display(Node* head)
 {
     Node* temp=head;
@@ -80,6 +97,7 @@ void deleteAtMiddle(Node* &head,int val)
     if(val==head->data)
     {
         deleteAtHead(head);
+        return;
     }
     if(head==NULL)
     {
@@ -92,7 +110,6 @@ void deleteAtMiddle(Node* &head,int val)
     Node* toDelete=temp->next;
     temp->next=temp->next->next;
     delete toDelete;
-
 }
 int main()
 {
@@ -103,6 +120,9 @@ int main()
     insertAtTail(head,4);
     display(head);
     deleteAtMiddle(head,1);
+    display(head);
+
+    reverseSingly(head);
     display(head);
     
 
