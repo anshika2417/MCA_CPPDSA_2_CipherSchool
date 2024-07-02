@@ -1,3 +1,4 @@
+//Linked list is a linear data structure
 #include<iostream>
 using namespace std;
 
@@ -93,8 +94,6 @@ void deleteAtMiddle(Node* &head,int val)
     delete toDelete;
 
 }
-
-
 int main()
 {
     Node* head=NULL;
