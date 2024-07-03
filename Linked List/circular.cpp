@@ -51,6 +51,19 @@ void insertionAtHead(Node* &head,int val)
     head=n;
 }
 
+bool isCircular(Node* &head)
+{
+    if(head==NULL) return NULL;
+
+    Node* temp=head;
+    while(temp!=NULL && temp!=head)
+    {
+        temp=temp->next;
+    }
+    if(head==head) return true;
+
+    return false;
+}
 void deletionAtHead(Node* &head)
 {
     Node* temp=head;

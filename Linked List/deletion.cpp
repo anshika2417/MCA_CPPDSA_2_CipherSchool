@@ -5,35 +5,44 @@ class Node{
     public:
     int data;
     Node* next;
-    Node* prev;
 
-    Node(int data)
+    Node(int d)
     {
-        this->data=data;
+        data=d;
         next=NULL;
-        prev=NULL;
     }
 };
 
-void insertion(Node* &head, int val)
+void insertAtTail(Node* &head,int val)
 {
     Node* n=new Node(val);
     Node* temp=head;
     if(head==NULL)
     {
         head=n;
-        head->next=NULL;
-        head->prev=NULL;
         return;
     }
-    while(temp->next !=NULL)
+    while(temp->next != NULL)
     {
         temp=temp->next;
     }
     temp->next=n;
-    n->prev=temp;   
 }
-void display(Node* &head)
+
+void insertAtHead(Node* &head,int val)
+{
+    Node* n=new Node(val);
+    if(head==NULL)
+    {
+        head=n;
+        return;
+    }
+    Node* temp=n;
+    temp->next=head;
+    head=n;
+}
+
+void display(Node* head)
 {
     Node* temp=head;
     while(temp!=NULL)
@@ -43,15 +52,15 @@ void display(Node* &head)
     }
     cout<<"NULL"<<endl;
 }
-
 int main()
 {
     Node* head=NULL;
-    insertion(head,1);
-    insertion(head,2);
-    insertion(head,3);
-    insertion(head,4);
+    insertAtTail(head,1);
+    insertAtTail(head,1);
+    insertAtTail(head,2);
+    insertAtTail(head,3);
+    insertAtTail(head,3);
     display(head);
-    middle(head);
+
     display(head);
 }
