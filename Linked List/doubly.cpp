@@ -52,6 +52,6 @@ int main()
     insertion(head,3);
     insertion(head,4);
     display(head);
-    middle(head);
+    //middle(head);
     display(head);
 }

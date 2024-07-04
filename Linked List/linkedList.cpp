@@ -224,6 +224,7 @@ int main()
     //kReverse(head,2);
     //display(head);
     floydDetection(head);
+    
     //getStartingNode(head);
     removeLoop(head);
   

@@ -67,6 +67,7 @@ bool isCircular(Node* &head)
 void deletionAtHead(Node* &head)
 {
     Node* temp=head;
+    
     while(temp->next != head)
     {
         temp=temp->next;

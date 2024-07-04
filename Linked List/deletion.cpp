@@ -52,6 +52,7 @@ void display(Node* head)
     }
     cout<<"NULL"<<endl;
 }
+
 int main()
 {
     Node* head=NULL;
