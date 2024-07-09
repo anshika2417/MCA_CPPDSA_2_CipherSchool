@@ -25,9 +25,10 @@ void printLevelOrder(Node* root)
     queue<Node*> q;
     q.push(root);
     q.push(NULL);
-
+    int level,sum = 0;
     while(!q.empty())
     {
+        
         Node* node = q.front();
         q.pop();
         if(node!=NULL)
@@ -46,6 +47,7 @@ void printLevelOrder(Node* root)
         else if(!q.empty())
         {
             q.push(NULL);
+            level++;
         }
     }
 }
