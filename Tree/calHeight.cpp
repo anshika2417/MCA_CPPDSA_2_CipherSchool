@@ -22,7 +22,7 @@ int calHeight(Node* root)
         return 0;
     }
 
-    return max(calHeight(root->left),calHeight(root->right) +1);
+    return max(calHeight(root->left),calHeight(root->right))+1;
 }
 int main()
 {
